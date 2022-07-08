@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Console_Game_Snake
 {
     public class Snake : Figure
     {
-        private readonly Direction _direction;
+        private Direction _direction;
 
         // tail - координаты хвостика
         public Snake(Point tail, int snakeLength, Direction direction)
@@ -42,6 +43,17 @@ namespace Console_Game_Snake
             Point nextPoint = new Point(head);
             nextPoint.Move(1, _direction); // новое положение головы
             return nextPoint;
+        }
+
+        public void HandleKey(ConsoleKey key)
+        {
+            _direction = key switch
+            {
+                ConsoleKey.LeftArrow => Direction.Left,
+                ConsoleKey.RightArrow => Direction.Right,
+                ConsoleKey.UpArrow => Direction.Up,
+                ConsoleKey.DownArrow => Direction.Down,
+            };
         }
     }
 }
