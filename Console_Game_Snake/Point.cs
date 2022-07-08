@@ -45,10 +45,10 @@ namespace Console_Game_Snake
                     this.X -= offset;
                     break;
                 case Direction.Up:
-                    this.Y += offset;
+                    this.Y -= offset;
                     break;
                 case Direction.Down:
-                    this.Y -= offset;
+                    this.Y += offset;
                     break;
             }
         }

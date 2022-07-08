@@ -25,16 +25,21 @@ namespace Console_Game_Snake
             leftLine.DrawLine();
             rightLine.DrawLine();
 
-            Point point = new(12, 9, '&');
+            Point point = new(12, 9, '*');
             Snake kaa = new Snake(point, 4, Direction.Right);
             kaa.DrawLine();
             kaa.Move();
 
-            for (int i = 0; i < 50; i++)
+            while (true)
             {
-                kaa.DrawLine();
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    kaa.HandleKey(key.Key);
+                }
+
+                Thread.Sleep(100);
                 kaa.Move();
-                Thread.Sleep(300);
             }
         }
     }
