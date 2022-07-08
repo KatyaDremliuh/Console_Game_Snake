@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Console_Game_Snake.GameField
 {
@@ -13,6 +14,15 @@ namespace Console_Game_Snake.GameField
                 Point point = new Point(x, oY, symbol);
                 PointsList.Add(point);
             }
+        }
+
+        public override void DrawLine()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            base.DrawLine();
+
+            Console.ResetColor();
         }
     }
 }
