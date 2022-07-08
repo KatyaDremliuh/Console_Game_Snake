@@ -53,6 +53,13 @@ namespace Console_Game_Snake
             }
         }
 
+        // "затираем" предыдущее положение точки при движении змейки
+        public void Clear()
+        {
+            Symbol = ' ';
+            DrawPoint();
+        }
+
         public override string ToString()
         {
             return X + ", " + Y + ", " + Symbol;

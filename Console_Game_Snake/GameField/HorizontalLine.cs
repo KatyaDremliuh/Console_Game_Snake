@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace Console_Game_Snake
+namespace Console_Game_Snake.GameField
 {
     public class HorizontalLine : Figure
     {
-        public List<Point> PointsList { get; }
-
         public HorizontalLine(int xLeft, int xRight, int oY, char symbol)
         {
             PointsList = new List<Point>();

@@ -6,7 +6,7 @@ namespace Console_Game_Snake
     {
         protected List<Point> PointsList;
 
-        public void DrawLine()
+        internal void DrawLine()
         {
             foreach (Point point in PointsList)
             {

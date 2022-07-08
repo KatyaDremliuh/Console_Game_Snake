@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Console_Game_Snake
+namespace Console_Game_Snake.GameField
 {
     public class VerticalLine : Figure
     {
