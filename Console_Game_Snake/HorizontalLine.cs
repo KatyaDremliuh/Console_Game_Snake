@@ -2,7 +2,7 @@
 
 namespace Console_Game_Snake
 {
-    public class HorizontalLine : Line
+    public class HorizontalLine : Figure
     {
         public List<Point> PointsList { get; }
 
