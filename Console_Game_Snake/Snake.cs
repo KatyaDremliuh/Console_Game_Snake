@@ -37,14 +37,6 @@ namespace Console_Game_Snake
             head.DrawPoint();
         }
 
-        private Point GetNextPoint()
-        {
-            Point head = PointsList.Last();
-            Point nextPoint = new Point(head);
-            nextPoint.Move(1, _direction); // новое положение головы
-            return nextPoint;
-        }
-
         public void HandleKey(ConsoleKey key)
         {
             _direction = key switch
@@ -87,6 +79,14 @@ namespace Console_Game_Snake
             }
 
             return false;
+        }
+
+        private Point GetNextPoint()
+        {
+            Point head = PointsList.Last();
+            Point nextPoint = new Point(head);
+            nextPoint.Move(1, _direction); // новое положение головы
+            return nextPoint;
         }
     }
 }

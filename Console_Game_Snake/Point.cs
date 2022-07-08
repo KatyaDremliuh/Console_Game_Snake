@@ -4,12 +4,11 @@ namespace Console_Game_Snake
 {
     public class Point
     {
-        private int X { get; set; }
-        private int Y { get; set; }
-
+        private double X { get; set; }
+        private double Y { get; set; }
         public char Symbol { get; set; }
 
-        public Point(int x, int y, char symbol)
+        public Point(double x, double y, char symbol)
         {
             X = x;
             Y = y;
@@ -25,7 +24,7 @@ namespace Console_Game_Snake
 
         public void DrawPoint()
         {
-            Console.SetCursorPosition(X, Y);
+            Console.SetCursorPosition((int)X, (int)Y);
             Console.Write(Symbol);
         }
 
@@ -34,7 +33,7 @@ namespace Console_Game_Snake
         /// </summary>
         /// <param name="offset">расстояние, на кот. двигать</param>
         /// <param name="direction">направление, в кот. двигать</param>
-        internal void Move(int offset, Direction direction)
+        public void Move(int offset, Direction direction)
         {
             switch (direction)
             {
@@ -60,17 +59,12 @@ namespace Console_Game_Snake
             DrawPoint();
         }
 
-        public override string ToString()
-        {
-            return X + ", " + Y + ", " + Symbol;
-        }
-
         /// <summary>
         /// Проверяет, совпали ли координаты головы змейки с координатами еды
         /// </summary>
         /// <param name="food">координаты еды</param>
         /// <returns></returns>
-        internal bool IsHit(Point food)
+        public bool IsHit(Point food)
         {
             return this.X == food.X && this.Y == food.Y;
         }

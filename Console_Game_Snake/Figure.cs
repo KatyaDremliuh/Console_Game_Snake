@@ -29,7 +29,7 @@ namespace Console_Game_Snake
             return false;
         }
 
-        public bool IsHit(Point point)
+        private bool IsHit(Point point)
         {
             foreach (var p in PointsList)
             {

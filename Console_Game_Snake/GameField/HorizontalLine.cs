@@ -5,11 +5,11 @@ namespace Console_Game_Snake.GameField
 {
     public class HorizontalLine : Figure
     {
-        public HorizontalLine(int xLeft, int xRight, int oY, char symbol)
+        public HorizontalLine(double xLeft, double xRight, double oY, char symbol)
         {
             PointsList = new List<Point>();
 
-            for (int x = xLeft; x <= xRight; x++)
+            for (double x = xLeft; x <= xRight; x++)
             {
                 Point point = new Point(x, oY, symbol);
                 PointsList.Add(point);
@@ -18,7 +18,7 @@ namespace Console_Game_Snake.GameField
 
         public override void DrawLine()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Green;
 
             base.DrawLine();
 
