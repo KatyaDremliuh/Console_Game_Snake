@@ -6,7 +6,10 @@ namespace Console_Game_Snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Point point = new Point(2, 9, '%');
+            point.Draw();
+
+            Console.ReadKey();
         }
     }
 }
