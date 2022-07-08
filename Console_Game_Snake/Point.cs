@@ -7,7 +7,7 @@ namespace Console_Game_Snake
         private int X { get; set; }
         private int Y { get; set; }
 
-        private char Symbol { get; set; }
+        public char Symbol { get; set; }
 
         public Point(int x, int y, char symbol)
         {
@@ -63,6 +63,16 @@ namespace Console_Game_Snake
         public override string ToString()
         {
             return X + ", " + Y + ", " + Symbol;
+        }
+
+        /// <summary>
+        /// Проверяет, совпали ли координаты головы змейки с координатами еды
+        /// </summary>
+        /// <param name="food">координаты еды</param>
+        /// <returns></returns>
+        internal bool IsHit(Point food)
+        {
+            return this.X == food.X && this.Y == food.Y;
         }
     }
 }
