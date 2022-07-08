@@ -2,7 +2,7 @@
 
 namespace Console_Game_Snake
 {
-    public class Line
+    public class Figure
     {
         protected List<Point> PointsList;
 

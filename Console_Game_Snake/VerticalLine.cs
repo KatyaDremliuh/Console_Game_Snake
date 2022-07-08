@@ -2,7 +2,7 @@
 
 namespace Console_Game_Snake
 {
-    public class VerticalLine : Line
+    public class VerticalLine : Figure
     {
         public VerticalLine(int yTop, int yBottom, int oX, char symbol)
         {

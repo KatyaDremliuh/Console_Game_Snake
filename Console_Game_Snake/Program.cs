@@ -24,7 +24,8 @@ namespace Console_Game_Snake
             rightLine.DrawLine();
 
             Point point = new(12, 9, '&');
-            point.DrawPoint();
+            Snake kaa = new Snake(point, 4, Direction.Right);
+            kaa.DrawLine();
 
             Console.ReadKey();
         }
