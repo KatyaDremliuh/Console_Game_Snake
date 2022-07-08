@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using Console_Game_Snake.GameField;
 
 namespace Console_Game_Snake
 {
@@ -10,7 +12,7 @@ namespace Console_Game_Snake
             const char borderSymbolVert = '|';
 
             // Sets the height and the wight of the screen
-            Console.SetBufferSize(220, 210);
+            Console.SetBufferSize(120, 30);
 
             // Draw all borders
             HorizontalLine upLine = new HorizontalLine(10, 88, 2, borderSymbolHor);
@@ -26,8 +28,14 @@ namespace Console_Game_Snake
             Point point = new(12, 9, '&');
             Snake kaa = new Snake(point, 4, Direction.Right);
             kaa.DrawLine();
+            kaa.Move();
 
-            Console.ReadKey();
+            for (int i = 0; i < 50; i++)
+            {
+                kaa.DrawLine();
+                kaa.Move();
+                Thread.Sleep(300);
+            }
         }
     }
 }
