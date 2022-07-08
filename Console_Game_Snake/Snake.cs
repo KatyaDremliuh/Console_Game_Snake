@@ -71,5 +71,22 @@ namespace Console_Game_Snake
 
             return false;
         }
+
+        // есть ли пересечения со своим хвостом (врезалась в хвост)
+        public bool IsHitTail()
+        {
+            Point head = PointsList.Last(); // получим координаты головы
+
+            // проверяем, есть ли пересечения между координатами головы и всего хвоста
+            for (int i = 0; i < PointsList.Count - 2; i++)
+            {
+                if (head.IsHit(PointsList[i]))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
