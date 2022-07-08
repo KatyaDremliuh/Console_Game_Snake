@@ -55,5 +55,21 @@ namespace Console_Game_Snake
                 ConsoleKey.DownArrow => Direction.Down,
             };
         }
+
+        public bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+
+            // если голова змейки попала на координаты еды
+            // увеличим змейку (добавить в List)
+            if (head.IsHit(food))
+            {
+                food.Symbol = head.Symbol;
+                PointsList.Add(food);
+                return true;
+            }
+
+            return false;
+        }
     }
 }
