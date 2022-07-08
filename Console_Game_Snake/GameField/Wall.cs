@@ -7,10 +7,10 @@ namespace Console_Game_Snake.GameField
     {
         private List<Figure> _wallsList;
         private const char BorderSymbolHor = '-';
-        const char BorderSymbolVert = '|';
+        private const char BorderSymbolVert = '|';
 
         // принимает габариты экрана
-        public Wall(int mapWidth, int mapHeight)
+        public Wall(double mapWidth, double mapHeight)
         {
             _wallsList = new List<Figure>();
 

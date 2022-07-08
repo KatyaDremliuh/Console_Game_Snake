@@ -12,9 +12,9 @@ namespace Console_Game_Snake
 
         public FoodCreator(int mapWidth, int mapHeight, char symbolFood)
         {
-            this.MapWidth = mapWidth;
-            this.MapHeight = mapHeight;
-            this.SymbolFood = symbolFood;
+            MapWidth = mapWidth;
+            MapHeight = mapHeight;
+            SymbolFood = symbolFood;
         }
 
         public Point CreateFood()
