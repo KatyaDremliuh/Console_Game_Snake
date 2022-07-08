@@ -16,7 +16,7 @@ namespace Console_Game_Snake
             Symbol = symbol;
         }
 
-        public void Draw()
+        public void DrawPoint()
         {
             Console.SetCursorPosition(X, Y);
             Console.Write(Symbol);
