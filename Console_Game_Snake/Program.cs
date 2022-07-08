@@ -7,7 +7,13 @@ namespace Console_Game_Snake
         static void Main(string[] args)
         {
             Point point = new Point(2, 9, '%');
-            point.Draw();
+            point.DrawPoint();
+
+            HorizontalLine horizontal = new HorizontalLine(53, 71, 16, '&');
+            horizontal.DrawHorizontalLine();
+
+            VerticalLine verticalLine = new(12, 43, 9, '!');
+            verticalLine.DrawVerticalLine();
 
             Console.ReadKey();
         }
